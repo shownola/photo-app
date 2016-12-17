@@ -1,5 +1,5 @@
 if Rails.env.production?
-  CarrierWave.configure do
+  CarrierWave.configure do |config|
     config.fog_credentials = {
     :provider =. 'AWS',
     :aws_access_key_id => ENV['S3_ACCESS_KEY'],
@@ -10,3 +10,4 @@ if Rails.env.production?
     
     end
   end
+  
